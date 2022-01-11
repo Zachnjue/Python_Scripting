@@ -6,7 +6,7 @@ import subprocess
 # cmd = "ls -lrt" ==> shell = True
 # cmd = "ls -lrt".split() or ['ls', '-lrt'] shell = False
 cmd = 'ls -lrt'
-sp = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True )
+sp = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True ) # use of universal_newlines=True. Helps list the output
 rt = sp.wait()
 out, err = sp.communicate()
 
